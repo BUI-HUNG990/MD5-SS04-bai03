@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS product_management;
+USE product_management;
+
+CREATE TABLE IF NOT EXISTS category (
+                                        id INT AUTO_INCREMENT PRIMARY KEY,
+                                        name VARCHAR(255) NOT NULL,
+                                        description TEXT,
+                                        status BOOLEAN DEFAULT TRUE
+);
+
+INSERT INTO category (name, description, status) VALUES
+                                                     ('điện tử', 'thiết bị điện tử', true),
+                                                     ('sách', 'các loại sách', true),
+                                                     ('quần áo', 'quàn áo nam nữ', false),
+                                                     ('nội thất', 'nội thất văn phòng', true);
+
+SELECT * FROM category;
